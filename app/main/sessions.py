@@ -13,7 +13,7 @@ Your backend should have a payment state where you can fetch information like am
 Parameters
     ----------
     host_url : string
-        URL of the host (i.e. http://localhost:8080): required to define returnUrl parameter
+        URL of the host (i.e. http://localhost:8080): required to define returnUrl parameter  
 '''
 
 
