@@ -25,7 +25,7 @@ def adyen_sessions(host_url):
 
     request = {}
 
-    request['amount'] = {"value": "6000", "currency": "EUR"}  # amount in minor units
+    request['amount'] = {"value": "10000", "currency": "EUR"}  # amount in minor units
     request['reference'] = f"Reference {uuid.uuid4()}"  # provide your unique payment reference
     # set redirect URL required for some payment methods
     request['returnUrl'] = f"{host_url}/redirect?shopperOrder=myRef"
@@ -33,7 +33,7 @@ def adyen_sessions(host_url):
 
     # set lineItems: required for some payment methods (ie Klarna)
     request['lineItems'] = \
-        [{"quantity": 1, "amountIncludingTax": 1000, "description": "Sunglasses"}, # amount in minor units
+        [{"quantity": 1, "amountIncludingTax": 5000, "description": "Sunglasses"}, # amount in minor units
          {"quantity": 1, "amountIncludingTax": 5000, "description": "Headphones"}] # amount in minor units
 
     request['merchantAccount'] = get_adyen_merchant_account()
